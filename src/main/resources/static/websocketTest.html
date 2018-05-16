@@ -8,7 +8,6 @@
 Welcome<br/>
 <input id="text" type="text" /><button onclick="send()">Send</button>
 <button onclick="closeWebSocket()">Close</button>
-<button onclick="openConn()">Open</button>
 
 <div id="message">
 </div>
@@ -16,17 +15,6 @@ Welcome<br/>
 
 <script type="text/javascript">
     var websocket = null;
-
-    function openConn() {
-        //判断当前浏览器是否支持WebSocket
-        if('WebSocket' in window){
-            websocket = new WebSocket("ws://localhost:8080/websocket");
-        }
-        else{
-            alert('Not support websocket')
-        }
-
-    }
 
     //判断当前浏览器是否支持WebSocket
     if('WebSocket' in window){
